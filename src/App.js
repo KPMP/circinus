@@ -1,25 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import NavBar from './components/NavBar';
+import { Card, CardBody, CardTitle, CardSubtitle, CardText, Row, Col } from 'reactstrap';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        <NavBar />
+        <Row id="demo-site">
+        	<Col><h1> KPMP Software Demonstrations </h1></Col>
+        </Row>
+        <Row>
+        	<Col sm="3">
+		        <Card>
+		        	<CardBody>
+			        	<CardTitle>Demo: Digital Pathology Repository</CardTitle>
+			        	<CardSubtitle>Slide Viewer Functionality</CardSubtitle>
+			        	<CardText>Demonstration of the slide viewing functionality for the Digital Pathology Repository.</CardText>
+		        	</CardBody>
+		        </Card>
+	        </Col>
+        </Row>
       </div>
     );
   }
