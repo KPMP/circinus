@@ -4,7 +4,7 @@ body {
   font-family: "Arial";
   font-feature-settings: "kern";
   font-kerning: normal;
-  font-size: 14px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   letter-spacing: normal;
@@ -44,8 +44,22 @@ a:hover {
     padding-top: 0px !important;
     padding-bottom: 0px !important; }
 
-.container-fluid {
-  margin-left: 0px !important;
-  margin-right: 0px !important;
-  padding-right: 0px !important;
-  padding-left: 0px !important; }
+#demo-site {
+  max-width: 1150px;
+  position: relative;
+  margin: auto; }
+  #demo-site .col, #demo-site div[class^='col'] {
+    padding-left: 0px !important; }
+  #demo-site .card-header {
+    background-color: white;
+    border-bottom: none; }
+
+#app-links {
+  margin-top: 15px; }
+
+.link-section-header {
+  margin-top: 15px;
+  background: #283c5e;
+  font-size: x-large;
+  color: white;
+  padding: 12px 10px; }
