@@ -1,14 +1,68 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  overflow: auto;
+  color: #333333;
+  font-family: "Arial";
+  font-feature-settings: "kern";
+  font-kerning: normal;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: normal;
+  text-rendering: optimizelegibility;
+  text-transform: none; }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
+a {
+  color: black;
+  text-decoration: none; }
+
+a:hover {
+  color: black;
+  text-decoration: none; }
+
+.clickable {
+  cursor: pointer; }
+
+.hoverable:hover {
+  opacity: 0.6; }
+
+.nav-container {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #797979;
+  border-radius: 0px;
+  margin-left: 0px !important;
+  padding-left: 0px !important;
+  height: 60px;
+  top: 0px;
+  z-index: 1000;
+  background: white; }
+  .nav-container .logo {
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 40px; }
+  .nav-container .navbar-brand {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important; }
+
+#demo-site {
+  padding-top: 15px;
+  max-width: 1150px;
+  position: relative;
+  margin: auto; }
+  #demo-site .col, #demo-site div[class^='col'] {
+    padding-left: 0px !important; }
+  #demo-site .card-header {
+    background-color: white;
+    border-bottom: none; }
+  #demo-site .card {
+    box-shadow: 0px 3px 5px gray; }
+
+#app-links {
+  margin-top: 15px; }
+
+.link-section-header {
+  margin-top: 15px;
+  background: #283c5e;
+  font-size: x-large;
+  color: white;
+  padding: 12px 10px; }

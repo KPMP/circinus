@@ -1,0 +1,90 @@
+@import "common-values.scss";
+
+
+body {
+	overflow: auto;
+	color: rgb(51, 51, 51);
+	font-family: "Arial";
+	font-feature-settings: "kern";
+	font-kerning: normal;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	letter-spacing: normal;
+	text-rendering: optimizelegibility;
+	text-transform: none;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+a:hover {
+	color: black;
+	text-decoration: none;
+}
+
+.clickable {
+	cursor: pointer;
+}
+
+.hoverable:hover {
+	opacity: 0.6;
+}
+
+.nav-container {
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgba(121, 121, 121, 1);
+	border-radius: 0px;
+	margin-left: 0px !important;
+	padding-left: 0px !important;
+	height: $header-height;
+	top: 0px;
+	z-index: 1000;
+	background: white;
+	
+	.logo {
+		margin-top: 10px;
+		margin-left: 10px;
+		height: 40px;
+	}
+
+	.navbar-brand {
+		padding-top: 0px !important;
+		padding-bottom: 0px !important;
+	}
+}
+
+#demo-site {
+	padding-top: 15px;
+	max-width: 1150px;
+	position: relative;
+	margin: auto;
+	
+	.col, div[class^='col'] {
+		padding-left: 0px !important;
+	}
+	
+	.card-header {
+		background-color: white;
+		border-bottom: none;
+	}
+	
+	.card {
+		box-shadow: 0px 3px 5px gray;
+	}
+}
+
+#app-links {
+	margin-top: 15px;
+}
+
+.link-section-header {
+	margin-top: 15px;
+	background: $kpmp-blue;
+	font-size: x-large;
+	color: white;
+	padding: 12px 10px;
+}
