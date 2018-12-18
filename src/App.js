@@ -19,7 +19,7 @@ class App extends Component {
 	        </Row>
 	        <Row id="app-links">
 	        	<CardDeck>
-				        <Card onClick={()=> window.location="/dpr"}>
+				        <Card className="clickable" onClick={()=> window.location="/dpr"}>
 				        	<CardBody>
 				        		<CardTitle tag="h4">Digital Pathology Repository (DPR)</CardTitle>
 					        	<CardSubtitle tag="h5">Slide Viewer Functionality</CardSubtitle>
@@ -27,7 +27,7 @@ class App extends Component {
 				        	</CardBody>
 				        </Card>
 				        
-				        <Card>
+				        <Card className="clickable" onClick={()=> window.location="/atlas"}>
 				        	<CardBody>
 					        	<CardTitle tag="h4">Kidney Tissue Atlas</CardTitle>
 					        	<CardSubtitle tag="h5">Transcriptomics data visualizations</CardSubtitle>
