@@ -22,7 +22,7 @@ class App extends Component {
 				        <Card className="clickable" onClick={()=> window.location="/dpr"}>
 				        	<CardBody>
 				        		<CardTitle tag="h4">Digital Pathology Repository (DPR)</CardTitle>
-					        	<CardSubtitle tag="h5">Slide Viewer Functionality</CardSubtitle>
+					        	<CardSubtitle tag="h5">Slide Viewer Concept</CardSubtitle>
 					        	<CardText>This is a demonstration of the slide viewing capabilities that will be in the Digital Pathology Repository. This demonstration has been pre-loaded with nephrectomy cases from Pilot 1.</CardText>
 				        	</CardBody>
 				        </Card>
