@@ -1,8 +1,34 @@
 import React, { Component } from 'react';
 import NavBar from './components/NavBar';
 import { Card, CardBody, CardTitle, CardText, CardSubtitle, CardDeck, Row, Col } from 'reactstrap';
+import ReactGA from 'react-ga';
+
+const GA_TRACKING_ID = 'UA‌-124331187-5';
+ReactGA.initialize(GA_TRACKING_ID);
 
 class App extends Component {
+
+	constructor(props) {
+		super(props);
+
+		this.logPageView = this.logPageView.bind(this);
+		this.onClick = this.onClick.bind(this);
+	}
+
+    logPageView(location, action) {
+        ReactGA.set({ page: location.pathname + location.search });
+        ReactGA.pageview(location.pathname + location.search);
+    }
+
+	onClick(location) {
+		this.logPageView(location);
+		window.location = location;
+	}
+
+    componentDidMount() {
+        this.logPageView(window.location, "");
+    }
+
   render() {
     return (
       <div>
@@ -19,7 +45,7 @@ class App extends Component {
 	        </Row>
 	        <Row id="app-links">
 	        	<CardDeck>
-				        <Card className="clickable" onClick={()=> window.location="/dpr"}>
+				        <Card className="clickable" onClick={()=> this.onClick("/dpr") }>
 				        	<CardBody>
 				        		<CardTitle tag="h4">Digital Pathology Repository (DPR)</CardTitle>
 					        	<CardSubtitle tag="h5">Slide Viewer Concept</CardSubtitle>
@@ -27,7 +53,7 @@ class App extends Component {
 				        	</CardBody>
 				        </Card>
 				        
-				        <Card className="clickable" onClick={()=> window.location="/atlas"}>
+				        <Card className="clickable" onClick={()=> this.onClick("/atlas") }>
 				        	<CardBody>
 					        	<CardTitle tag="h4">Kidney Tissue Atlas</CardTitle>
 					        	<CardSubtitle tag="h5">Transcriptomics data visualizations</CardSubtitle>
