@@ -1,9 +1,25 @@
 import React, { Component } from 'react';
 import NavBar from './components/NavBar';
 import { Card, CardBody, CardTitle, CardText, CardSubtitle, CardDeck, Row, Col } from 'reactstrap';
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('UA‌-124331187-5');
+function logPageView(location, action) {
+	ReactGA.set({ page: location.pathname + location.search });
+	ReactGA.pageview(location.pathname + location.search);
+}
 
 class App extends Component {
-  render() {
+
+	handleClick = (location) => {
+		ReactGA.event({
+            category: 'Navigation',
+            action: location
+        });
+		window.location = '/' + location;
+	}
+	
+	render() {
     return (
       <div>
         <NavBar />
@@ -19,7 +35,7 @@ class App extends Component {
 	        </Row>
 	        <Row id="app-links">
 	        	<CardDeck>
-				        <Card className="clickable" onClick={()=> window.location="/dpr"}>
+				        <Card className="clickable" onClick={()=> this.handleClick("dpr")}>
 				        	<CardBody>
 				        		<CardTitle tag="h4">Digital Pathology Repository (DPR)</CardTitle>
 					        	<CardSubtitle tag="h5">Slide Viewer Concept</CardSubtitle>
@@ -27,7 +43,7 @@ class App extends Component {
 				        	</CardBody>
 				        </Card>
 				        
-				        <Card className="clickable" onClick={()=> window.location="/atlas"}>
+				        <Card className="clickable" onClick={()=> this.handlClick("atlas")}>
 				        	<CardBody>
 					        	<CardTitle tag="h4">Kidney Tissue Atlas</CardTitle>
 					        	<CardSubtitle tag="h5">Transcriptomics data visualizations</CardSubtitle>
