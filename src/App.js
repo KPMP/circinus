@@ -11,6 +11,10 @@ function logPageView(location, action) {
 
 class App extends Component {
 
+	componentWillMount() {
+		logPageView(window.location, "");
+	}
+	
 	handleClick = (location) => {
 		ReactGA.event({
             category: 'Navigation',
