@@ -3,8 +3,6 @@ import NavBar from './components/NavBar';
 import { Card, CardBody, CardTitle, CardText, CardSubtitle, CardDeck, Row, Col } from 'reactstrap';
 import ReactGA from 'react-ga';
 
-const 
-
 ReactGA.initialize('UA-124331187-5');
 function logPageView(location, action) {
 	ReactGA.set({ page: location.pathname + location.search });
