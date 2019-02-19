@@ -47,7 +47,7 @@ class App extends Component {
 				        	</CardBody>
 				        </Card>
 				        
-				        <Card className="clickable" onClick={()=> this.handlClick("atlas")}>
+				        <Card className="clickable" onClick={()=> this.handleClick("atlas")}>
 				        	<CardBody>
 					        	<CardTitle tag="h4">Kidney Tissue Atlas</CardTitle>
 					        	<CardSubtitle tag="h5">Transcriptomics data visualizations</CardSubtitle>
