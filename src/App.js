@@ -39,21 +39,27 @@ class App extends Component {
 	        </Row>
 	        <Row id="app-links">
 	        	<CardDeck>
-				        <Card className="clickable" onClick={()=> this.handleClick("dpr")}>
-				        	<CardBody>
-				        		<CardTitle tag="h4">Digital Pathology Repository (DPR)</CardTitle>
-					        	<CardSubtitle tag="h5">Slide Viewer Concept</CardSubtitle>
-					        	<CardText>This is a demonstration of the slide viewing capabilities that will be in the Digital Pathology Repository. This demonstration has been pre-loaded with nephrectomy cases from Pilot 1.</CardText>
-				        	</CardBody>
-				        </Card>
-				        
+					<Card className="clickable" onClick={()=> this.handleClick("gene-search")}>
+						<CardBody>
+							<CardTitle tag="h4">Kidney Tissue Atlas</CardTitle>
+							<CardSubtitle tag="h5">Gene search</CardSubtitle>
+							<CardText>This is a demonstration of some of the transcriptomics data visualizations we envision putting into the Kidney Tissue Atlas.  This application allows a user to search for a gene of interest and see the corresponding transcriptomics datasets. The data in this demonstration is single-cell,  single-nucleus, and LMD RNA-seq data from the Pilot 1 samples, as well as other reference tissue from the Tissue Interrogation Sites.</CardText>
+						</CardBody>
+					</Card>
 				        <Card className="clickable" onClick={()=> this.handleClick("atlas")}>
 				        	<CardBody>
 					        	<CardTitle tag="h4">Kidney Tissue Atlas</CardTitle>
-					        	<CardSubtitle tag="h5">Transcriptomics data visualizations</CardSubtitle>
-					        	<CardText>This is a demonstration of some of the the transcriptomics data visualizations we envision putting into the Kidney Tissue Atlas. The data in this demonstration is single-cell and single-nucleus RNA-seq data from the Pilot 1 samples.</CardText>
+					        	<CardSubtitle tag="h5">Cell type/structure search</CardSubtitle>
+					        	<CardText>This is a demonstration of some of the transcriptomics data visualizations we envision putting into the Kidney Tissue Atlas. This application allows a user to select a cell type of interest and see the corresponding transcriptomics data. The data in this demonstration is single-cell and single-nucleus RNA-seq data from the Pilot 1 samples.</CardText>
 				        	</CardBody>
 				        </Card>
+					<Card className="clickable" onClick={()=> this.handleClick("dpr")}>
+						<CardBody>
+							<CardTitle tag="h4">Digital Pathology Repository (DPR)</CardTitle>
+							<CardSubtitle tag="h5">Slide Viewer Concept</CardSubtitle>
+							<CardText>This is a demonstration of the slide viewing capabilities that will be in the Digital Pathology Repository. This demonstration has been pre-loaded with nephrectomy cases from Pilot 1.</CardText>
+						</CardBody>
+					</Card>
 		        </CardDeck>
 	        </Row>
         </div>
