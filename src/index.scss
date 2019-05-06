@@ -33,29 +33,46 @@ a:hover {
 	opacity: 0.6;
 }
 
-.nav-container {
-	border-width: 1px;
-	border-style: solid;
-	border-color: rgba(121, 121, 121, 1);
-	border-radius: 0px;
-	margin-left: 0px !important;
-	padding-left: 0px !important;
-	height: $header-height;
-	top: 0px;
-	z-index: 1000;
-	background: white;
-	
-	.logo {
-		margin-top: 10px;
-		margin-left: 10px;
-		height: 40px;
+#root {
+	position: relative;
+	overflow-y: scroll;
+
+	/* xs to sm */
+	top: calc(#{$header-height-padded});
+	height: calc(100vh + 10px
+		- #{$header-height-padded}
+		- #{$footer-height-padded});
+
+	/* md and up */
+	@media (min-width: 768px) {
+		top: calc(#{$header-height-padded});
+		height: calc(100vh + 10px
+			- #{$header-height-padded}
+			- #{$footer-height-padded});
+	}
+}
+
+
+#navbar {
+	background-color: white;
+	border-bottom: 1px solid #e7e7e7;
+
+	.navbar-header {
+
+		text-decoration: none !important;
+
+		.navbar-brand img.logo {
+			height: 50px;
+		}
 	}
 
 	.navbar-brand {
 		padding-top: 0px !important;
 		padding-bottom: 0px !important;
 	}
+
 }
+
 
 #demo-site {
 	padding-top: 15px;
