@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Navbar, NavbarBrand, Col, Button } from 'reactstrap';
+import { Navbar, NavbarBrand, Col } from 'reactstrap';
 
 class NavBar extends Component {
   render() {
